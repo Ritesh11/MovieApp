@@ -9,6 +9,8 @@ lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
 composeBom = "2024.11.00"
 navVersion = "2.8.4"
+graphQl = "2.5.9"
+coilVersion = "3.0.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,6 +28,12 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+graphql-runtime = { group = "com.apollographql.apollo", name = "apollo:apollo-runtime", version.ref = "graphQl"}
+graphql-support = { group = "com.apollographql.apollo", name = "apollo-android-support", version.ref = "graphQl"}
+compose-coil = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coilVersion"}
+compose-coil-network = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coilVersion"}
+
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

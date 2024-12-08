@@ -59,6 +59,14 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation)
+
+    // GraphQl
+   /* implementation(libs.graphql.runtime)
+    implementation(libs.graphql.support)*/
+
+    implementation(libs.compose.coil)
+    implementation(libs.compose.coil.network)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
