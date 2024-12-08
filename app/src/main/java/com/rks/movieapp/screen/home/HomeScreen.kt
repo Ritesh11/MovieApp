@@ -1,4 +1,4 @@
-package com.rks.movieapp.screen
+package com.rks.movieapp.screen.home
 
 import android.util.Log
 import androidx.compose.foundation.clickable
@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.rks.movieapp.R
+import com.rks.movieapp.navigation.MovieScreens
 
 
 @Composable
@@ -39,7 +40,7 @@ fun HomeScreen(
 ) {
 
     Toolbar(){
-        MovieListScreen()
+        MovieListScreen(navController = navController)
     }
 
 }
@@ -65,7 +66,7 @@ fun Toolbar(content: @Composable () -> Unit){
 }
 
 @Composable
-fun MovieListScreen(modifier: Modifier = Modifier) {
+fun MovieListScreen(modifier: Modifier = Modifier,  navController: NavController) {
     val movieList: List<String> = listOf(
         "Kuch Na Kaho",
         "Kuch Bhi na kaho",
@@ -82,6 +83,7 @@ fun MovieListScreen(modifier: Modifier = Modifier) {
 
             MovieItem(modifier, movieName) {
                 Log.d("MovieListScreen", "Item clicked -> $movieName")
+                navController.navigate(MovieScreens.DetailScreen.name+"/$movieName")
             }
 
         }
