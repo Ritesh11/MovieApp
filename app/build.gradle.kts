@@ -5,12 +5,11 @@ plugins {
 
 android {
     namespace = "com.rks.movieapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.rks.movieapp"
         minSdk = 25
-        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
